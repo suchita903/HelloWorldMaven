@@ -1,0 +1,10 @@
+pipeline{
+    agent any
+    stages{
+        stage("Git checkout"){
+            steps{
+                git credentialsId: 'git-cred1', url: 'git@github.com:suchita903/HelloWorldMaven.git'
+            }
+        }
+    }
+}
